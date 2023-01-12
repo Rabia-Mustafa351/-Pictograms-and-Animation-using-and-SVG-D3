@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>D3 Basic Methods</title>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!-- // load d3-selection-multi as separate script -->
+        <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <title>SVG PATH</title>
+</head>
+
+<body> 
+    <script> 
+    var width = 680;
+    var height = 680;
+    //Create SVG element
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height); 
+
+    //Create and append rectangle element
+    svg.append("rect") 
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 680)
+            .attr("height", 680)
+            .attr("stroke","black")
+            .attr("fill","white")  
+
+
+            svg.append("line")                  // attach a line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 70)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 570)     // x position of the first end of the line
+    .attr("y1", 200)     // y position of the first end of the line
+    .attr("x2", 680)     // x position of the second end of the line
+    .attr("y2", 200);    // y position of the second end of the line
+
+    svg.append("line")                  // attach a line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 630)     // x position of the first end of the line
+    .attr("y1", 440)     // y position of the first end of the line
+    .attr("x2", 680)     // x position of the second end of the line
+    .attr("y2", 390);    // y position of the second end of the line
+
+
+    svg.append("line")                  // attach a line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 5)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 425)     // x position of the first end of the line
+    .attr("y1", 560)     // y position of the first end of the line
+    .attr("x2", 550)     // x position of the second end of the line
+    .attr("y2", 480);    // y position of the second end of the line
+
+
+    svg.append("line")                  // attach a line  // vertical line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 75)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 105)     // x position of the first end of the line
+    .attr("y1", 210)     // y position of the first end of the line
+    .attr("x2", 105)     // x position of the second end of the line
+    .attr("y2", 400);    // y position of the second end of the line
+
+
+    svg.append("line")                  // attach a line  // beak line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 42)     // x position of the first end of the line
+    .attr("y1", 220)     // y position of the first end of the line
+    .attr("x2", 70)     // x position of the second end of the line
+    .attr("y2", 220);    // y position of the second end of the line
+
+    
+    svg.append("line")                  // attach a line  // horizontal line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 120)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 130)     // x position of the first end of the line
+    .attr("y1", 395)     // y position of the first end of the line
+    .attr("x2", 350)     // x position of the second end of the line
+    .attr("y2", 395);    // y position of the second end of the line  
+
+
+
+    svg.append("circle")
+            .attr("cx", 240)
+            .attr("cy", 450)
+            .attr("r", 60) 
+            .attr("stroke","white")
+            .attr("fill","white")
+// lower back
+            svg.append("line")                  // attach a line  // horizontal line
+    .style("stroke", "white")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 271)     // x position of the first end of the line
+    .attr("y1", 410)     // y position of the first end of the line
+    .attr("x2", 330)     // x position of the second end of the line
+    .attr("y2", 475);    // y position of the second end of the line  
+
+
+    
+    svg.append("line")                  // attach a line  // leg 2  // white line
+    .style("stroke", "white")          // colour the line
+    .style("stroke-width", 30)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 400)     // x position of the first end of the line
+    .attr("y1", 280)     // y position of the first end of the line
+    .attr("x2", 400)     // x position of the second end of the line
+    .attr("y2", 440);    // y position of the second end of the line
+
+    svg.append("line")                  // attach a line  // leg 2  // white line
+    .style("stroke", "white")          // colour the line
+    .style("stroke-width", 25)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 237)     // x position of the first end of the line
+    .attr("y1", 410)     // y position of the first end of the line
+    .attr("x2", 338)     // x position of the second end of the line
+    .attr("y2", 474);    // y position of the second end of the line  
+
+
+    // lower front 
+svg.append("line")                  // attach a line  // horizontal line
+    .style("stroke", "white")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 210)     // x position of the first end of the line
+    .attr("y1", 409)     // y position of the first end of the line
+    .attr("x2", 145)     // x position of the second end of the line
+    .attr("y2", 475);    // y position of the second end of the line  
+
+    svg.append("line")                  // attach a line  // horizontal line
+    .style("stroke", "white")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 225)     // x position of the first end of the line
+    .attr("y1", 425)     // y position of the first end of the line
+    .attr("x2", 145)     // x position of the second end of the line
+    .attr("y2", 465);    // y position of the second end of the line  
+
+
+
+
+
+
+//lf end
+
+
+    svg.append("line")                  // attach a line  // leg 2
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 375)     // x position of the first end of the line
+    .attr("y1", 425)     // y position of the first end of the line
+    .attr("x2", 375)     // x position of the second end of the line
+    .attr("y2", 550);    // y position of the second end of the line
+
+    svg.append("line")                  // attach a line  // leg 1
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 20)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 105)     // x position of the first end of the line
+    .attr("y1", 425)     // y position of the first end of the line
+    .attr("x2", 105)     // x position of the second end of the line
+    .attr("y2", 550);    // y position of the second end of the line
+
+    svg.append("line")                  // attach a line
+    .style("stroke", "black")          // colour the line
+    .style("stroke-width", 50)         // adjust line width
+    .style("stroke-linecap", "round")  // stroke-linecap type
+    .attr("x1", 560)     // x position of the first end of the line
+    .attr("y1", 200)     // y position of the first end of the line
+    .attr("x2", 560)     // x position of the second end of the line
+    .attr("y2", 500);    // y position of the second end of the line
+
+
+    svg.append("circle")
+            .attr("cx", 490)
+            .attr("cy", 160)
+            .attr("r", 35) 
+            .attr("stroke","black")
+            .attr("fill","black")
+
+        
+
+            
+        
+
+
+
+
+</script>
+
+</body>
+</html>

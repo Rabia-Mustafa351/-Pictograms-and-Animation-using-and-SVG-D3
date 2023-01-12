@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>D3 Basic Methods</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- // load d3-selection-multi as separate script -->
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+
+    <title>SVG PATH</title>
+</head>
+
+<body>
+    <svg id="g" width="680" height="680"></svg>
+    <script>
+        //Create and append rectangle element
+        d3.select("#g").append("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 680)
+            .attr("height", 680)
+            .attr("stroke", "black")
+            .attr("fill", "white")
+
+        d3.select("#g").append("circle")
+            .attr("cx", 345)
+            .attr("cy", 100)
+            .attr("r", 70)
+            .attr("stroke", "black")
+            .attr("fill", "pink")
+
+        d3.select("#g").append("line")
+            .attr("x1", 345)
+            .attr("x2", 345)
+            .attr("y1", 30)
+            .attr("y2", 170)
+            .attr("stroke", "black")
+
+        //football curve one
+        var points1 = [{
+                xpoint: 395,
+                ypoint: 51
+            }, {
+                xpoint: 380,
+                ypoint: 40
+            }, {
+                xpoint: 343,
+                ypoint: 75
+            }, {
+                xpoint: 345,
+                ypoint: 95
+            }
+            // {  xpoint: 260,  ypoint: 87 }, 
+
+
+        ];
+
+
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points1))
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            // .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+        //////second curve
+        var points2 = [{
+                xpoint: 345,
+                ypoint: 80
+            }, {
+                xpoint: 330,
+                ypoint: 60
+            }, {
+                xpoint: 310,
+                ypoint: 40
+            }, {
+                xpoint: 295,
+                ypoint: 50
+            }
+            // {  xpoint: 260,  ypoint: 87 }, 
+
+
+        ];
+
+
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points2))
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            // .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+
+
+        ///////curve 3
+        var points3 = [{
+                xpoint: 415,
+                ypoint: 110
+            }, {
+                xpoint: 380,
+                ypoint: 80
+            }, {
+                xpoint: 345,
+                ypoint: 75
+            }, {
+                xpoint: 345,
+                ypoint: 90
+            }
+            // {  xpoint: 260,  ypoint: 87 }, 
+
+
+        ];
+
+
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points3))
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            // .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+        //////4th curve
+        var points4 = [{
+                xpoint: 345,
+                ypoint: 80
+            }, {
+                xpoint: 320,
+                ypoint: 75
+            }, {
+                xpoint: 275,
+                ypoint: 105
+            }, {
+                xpoint: 275,
+                ypoint: 120
+            }
+            // {  xpoint: 260,  ypoint: 87 }, 
+
+
+        ];
+
+
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points4))
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            // .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+
+        //curve 5
+
+
+        ///////curve 3
+        var points5 = [{
+                xpoint: 380,
+                ypoint: 160
+            }, {
+                xpoint: 380,
+                ypoint: 110
+            }, {
+                xpoint: 345,
+                ypoint: 75
+            }, {
+                xpoint: 345,
+                ypoint: 90
+            }
+            // {  xpoint: 260,  ypoint: 87 }, 
+
+
+        ];
+
+
+        //////6th curve
+        var points6 = [{
+                xpoint: 345,
+                ypoint: 80
+            }, {
+                xpoint: 315,
+                ypoint: 100
+            }, {
+                xpoint: 310,
+                ypoint: 150
+            }, {
+                xpoint: 315,
+                ypoint: 163
+            }
+            // {  xpoint: 260,  ypoint: 87 }, 
+
+
+        ];
+
+
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points6))
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            // .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+
+
+
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points5))
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            // .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+
+
+
+
+        // left arm
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "black") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "square") // stroke-linecap type
+            .attr("x1", 235) // x position of the first end of the line
+            .attr("y1", 100) // y position of the first end of the line
+            .attr("x2", 235) // x position of the second end of the line
+            .attr("y2", 330); // y position of the second end of the line
+
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "black") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "square") // stroke-linecap type
+            .attr("x1", 260) // x position of the first end of the line
+            .attr("y1", 100) // y position of the first end of the line
+            .attr("x2", 260) // x position of the second end of the line
+            .attr("y2", 330); // y position of the second end of the line
+
+        //curve start
+        var points1 = [{
+                xpoint: 266,
+                ypoint: 84
+            }, {
+                xpoint: 260,
+                ypoint: 87
+            }, {
+                xpoint: 227,
+                ypoint: 135
+            }, {
+                xpoint: 225,
+                ypoint: 145
+            }, {
+                xpoint: 212,
+                ypoint: 160
+            }, {
+                xpoint: 212,
+                ypoint: 330
+            }, {
+                xpoint: 214,
+                ypoint: 350
+            }, {
+                xpoint: 237,
+                ypoint: 360
+            }, {
+                xpoint: 250,
+                ypoint: 370
+            }
+
+        ];
+
+        //curvature for the thread of kite 1
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points1))
+            .attr("fill", "none")
+            .attr("stroke", "white")
+            .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+
+        // curve start
+
+
+        // curve end
+        //k
+        d3.select("#g").append("circle")
+            .attr("cx", 258)
+            .attr("cy", 318)
+            .attr("r", 35)
+            .attr("fill", "black")
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "white") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "round") // stroke-linecap type
+            .attr("x1", 200) // x position of the first end of the line
+            .attr("y1", 320) // y position of the first end of the line
+            .attr("x2", 220) // x position of the second end of the line
+            .attr("y2", 355); // y
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "white") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "round") // stroke-linecap type
+            .attr("x1", 203) // x position of the first end of the line
+            .attr("y1", 300) // y position of the first end of the line
+            .attr("x2", 214) // x position of the second end of the line
+            .attr("y2", 359); // y
+
+        // k
+
+
+        //// right arm 
+
+
+
+
+        d3.select("#g").append("circle") // ni ho ra
+            .attr("cx", 440)
+            .attr("cy", 325)
+            .attr("r", 40)
+            .attr("fill", "black")
+
+
+
+
+
+
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "black") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "square") // stroke-linecap type
+            .attr("x1", 458) // x position of the first end of the line
+            .attr("y1", 100) // y position of the first end of the line
+            .attr("x2", 458) // x position of the second end of the line
+            .attr("y2", 330); // y position of the second end of the line
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "black") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "square") // stroke-linecap type
+            .attr("x1", 430) // x position of the first end of the line
+            .attr("y1", 100) // y position of the first end of the line
+            .attr("x2", 430) // x position of the second end of the line
+            .attr("y2", 330); // y position of the second end of the line
+
+        var points1 = [{
+                xpoint: 424,
+                ypoint: 85
+            }, {
+                xpoint: 435,
+                ypoint: 95
+            }, {
+                xpoint: 450,
+                ypoint: 110
+            },
+
+            {
+                xpoint: 465,
+                ypoint: 125
+            }, {
+                xpoint: 490,
+                ypoint: 160
+            }, {
+                xpoint: 485,
+                ypoint: 330
+            }, {
+                xpoint: 470,
+                ypoint: 350
+            }, {
+                xpoint: 460,
+                ypoint: 360
+            },
+            // {
+            //     xpoint: 470,
+            //     ypoint: 350
+            // }
+            // },
+            // {
+            //     xpoint: 237,
+            //     ypoint: 360
+            // },
+            // {
+            //     xpoint: 250,
+            //     ypoint: 370
+            // }
+
+        ];
+
+        //curvature for the thread of kite 1
+        var Gen = d3.line()
+            .x((p) => p.xpoint)
+            .y((p) => p.ypoint)
+            .curve(d3.curveBasis);
+
+
+        d3.select("#g")
+            .append("path")
+            .attr("d", Gen(points1))
+            .attr("fill", "none")
+            .attr("stroke", "white")
+            .style("stroke-width", 20)
+            .style("stroke-linecap", "round");
+
+
+        // curve start
+
+
+        // curve end
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "white") // colour the line
+            .style("stroke-width", 20) // adjust line width
+            .style("stroke-linecap", "square") // stroke-linecap type
+            .attr("x1", 430) // x position of the first end of the line
+            .attr("y1", 360) // y position of the first end of the line
+            .attr("x2", 460) // x position of the second end of the line
+            .attr("y2", 360); // y
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "white") // colour the line
+            .style("stroke-width", 20) // adjust line width
+            .style("stroke-linecap", "square") // stroke-linecap type
+            .attr("x1", 485) // x position of the first end of the line
+            .attr("y1", 360) // y position of the first end of the line
+            .attr("x2", 485) // x position of the second end of the line
+            .attr("y2", 300); // y
+
+
+
+        // shoulders line
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "white") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "round") // stroke-linecap type
+            .attr("x1", 290) // x position of the first end of the line
+            .attr("y1", 285) // y position of the first end of the line
+            .attr("x2", 401) // x position of the second end of the line
+            .attr("y2", 285); // y
+
+        d3.select("#g").append("circle")
+            .attr("cx", 345)
+            .attr("cy", 240)
+            .attr("r", 50)
+            .attr("fill", "purple")
+
+
+        // right  arm end
+
+        d3.select("#g").append("line") // attach a line
+            .style("stroke", "black") // colour the line
+            .style("stroke-width", 30) // adjust line width
+            .style("stroke-linecap", "round") // stroke-linecap type
+            .attr("x1", 245) // x position of the first end of the line
+            .attr("y1", 340) // y position of the first end of the line
+            .attr("x2", 300) // x position of the second end of the line
+            .attr("y2", 340); // y
+
+        d3.select("#g").append("circle") // ni ho ra
+            .attr("cx", 470)
+            .attr("cy", 88)
+            .attr("r", 33)
+            .attr("fill", "white")
+
+        d3.select("#g").append("circle") // ni ho ra
+            .attr("cx", 223)
+            .attr("cy", 99)
+            .attr("r", 32)
+            .attr("fill", "white")
+
+        d3.select("#g").append("rect")
+            .attr("x", 270)
+            .attr("y", 300)
+            .attr("width", 150)
+            .attr("height", 400)
+            .att("fill", "white")
+    </script>
+
+
+
+</body>
+
+</html>
